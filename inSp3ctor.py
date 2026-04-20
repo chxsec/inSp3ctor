@@ -93,7 +93,7 @@ def check_response(status_code, word, content, s3_type):
             if args.o:
                 check_object_status(content, word)
         elif status_code == 403:
-            print(Back.YELLOW + '[!] ' + s3_type + ' is marked private [' +
+            print(Fore.BLACK + Back.YELLOW + '[!] ' + s3_type + ' is marked private [' +
                   word.rstrip() + ']' + Style.RESET_ALL)
         elif status_code == 301:
             redirect = parse_response(content)
